@@ -156,6 +156,18 @@ export class FeaturePage {
 5. **Data-driven for boundaries** — use parameterized tests / `Scenario Outline` for boundary analysis.
 6. **Tags for filtering** — always tag by category and priority so CI can filter by scope.
 
+## Deployment to live test repo
+
+After saving draft output to `qa-output/automation/`, copy the generated files into the
+live test repository so they are immediately runnable:
+
+- Spec files → `dog-store-e2e-tests/tests/ui-tests/specs/`
+- Page objects → `dog-store-e2e-tests/tests/ui-tests/pages/`
+
+Before writing, read any existing files in those directories to match the project's
+existing patterns, imports, and conventions. Adjust relative import paths as needed
+(e.g., page object imports should use `../pages/` when in the specs directory).
+
 ## Rules
 
 - Match existing project patterns exactly. If existing test structure is provided, follow it.
